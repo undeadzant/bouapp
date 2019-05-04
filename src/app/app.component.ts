@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { VendorComponent } from './vendor.component'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<vendor></vendor>'
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'Boucherie';
 }
