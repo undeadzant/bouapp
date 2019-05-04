@@ -6,3 +6,10 @@
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
   }
+/* For Images */
+  .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
