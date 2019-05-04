@@ -3,7 +3,7 @@ import { VendorComponent } from './vendor.component'
 
 @Component({
   selector: 'app-root',
-  template: '<vendor></vendor>'
+  template: '<app-boucherie></app-boucherie>'
 })
 export class AppComponent {
   title = 'Boucherie';
