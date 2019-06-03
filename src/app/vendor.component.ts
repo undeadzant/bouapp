@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { ApiService } from './api.service'
 
 @Component({
     selector: 'vendor',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core'
 })
 
 export class VendorComponent {
+
+    vendors = {}
+
+    constructor(private api: ApiService)
+    {
+
+    }
+
+    post(vendors){
+        this.api.postVendor(vendors)
+    }
 
 }
