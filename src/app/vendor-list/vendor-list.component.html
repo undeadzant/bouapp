@@ -1,0 +1,24 @@
+<header>
+    <h2>New Vendor Table</h2>
+</header>
+<mat-card>
+    <mat-card-content>   
+      <table mat-table [dataSource] = "dataSource">
+        <ng-container matColumnDef="vendorsId">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let vendor"> {{vendor.vendorsId}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="vendorName">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let vendor"> {{vendor.vendorName}} </td>
+        </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+                  
+    </mat-card-actions>
+</mat-card>

@@ -6,6 +6,15 @@
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
   }
+
+.clickLink {
+  cursor: pointer;
+}
+
+.fullWidth {
+  width: 100%
+}
+
 /* For Images */
   .center {
    display: block;

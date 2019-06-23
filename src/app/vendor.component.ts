@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { ApiService } from './api.service'
 
 @Component({
@@ -8,15 +8,21 @@ import { ApiService } from './api.service'
 
 export class VendorComponent {
 
-    vendors = {}
+    vendor = {}
+    vendorId
 
     constructor(private api: ApiService)
     {
 
     }
 
-    post(vendors){
-        this.api.postVendor(vendors)
+    ngOnInit() {
+        this.api.vendorSelected.subscribe(vendor => this.vendor = vendor)
+    }
+
+    post(vendor){
+        vendor.vendorId = this.vendorId;
+        this.api.postVendor(vendor)
     }
 
 }
